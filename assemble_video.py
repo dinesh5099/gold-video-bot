@@ -5,7 +5,7 @@ def create_video(image_path, audio_path, output_path="gold_update.mp4"):
     duration = audio.duration
     
     image_clip = ImageClip(image_path).set_duration(duration)
-    image_clip = image_clip.resize(height=1080)
+    image_clip = image_clip.resize(newsize=(1920, 1080))
     
     final = image_clip.set_audio(audio)
     final.write_videofile(
