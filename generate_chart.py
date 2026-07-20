@@ -6,7 +6,7 @@ def create_price_chart(prices, output_path="gold_chart.png"):
     days = [datetime.now() - timedelta(days=x) for x in range(len(prices)-1, -1, -1)]
     
     plt.style.use('dark_background')
-    fig, ax = plt.subplots(figsize=(16, 9), dpi=100)
+    fig, ax = plt.subplots(figsize=(19.2, 10.8), dpi=100)
     
     ax.plot(days, prices, color='#FFD700', linewidth=3, marker='o', markersize=8)
     ax.fill_between(days, prices, min(prices)-10, alpha=0.2, color='#FFD700')
